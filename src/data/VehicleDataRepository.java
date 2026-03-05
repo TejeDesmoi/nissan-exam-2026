@@ -28,7 +28,7 @@ public class VehicleDataRepository implements IVehicleRepository {
 
     }
 
-    public VehicleDataRepository getInstance(){
+    public static VehicleDataRepository getInstance(){
         if (instance == null){
             instance = new VehicleDataRepository (new VehicleMemLocalDataSource());
         }
