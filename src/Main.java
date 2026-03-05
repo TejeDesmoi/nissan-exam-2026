@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) {
         VehicleView vehicleView = new VehicleView();
 
-        //vehicleView.addAndCheck(new Vehicle("4","Modelo 4","70","3","Gris"));
-        vehicleView.visualization();
+        vehicleView.deleteAndCheck("3");
+
 
     }
 }
