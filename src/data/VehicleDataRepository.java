@@ -20,7 +20,7 @@ public class VehicleDataRepository implements IVehicleRepository {
 
     @Override
     public void save(Vehicle vehicle) {
-
+        vehicleMemLocalDataSource.save(vehicle);
     }
 
     @Override
