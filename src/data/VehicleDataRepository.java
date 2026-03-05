@@ -15,7 +15,7 @@ public class VehicleDataRepository implements IVehicleRepository {
 
     @Override
     public ArrayList<Vehicle> findAll() {
-        return null;
+        return vehicleMemLocalDataSource.findAll();
     }
 
     @Override
