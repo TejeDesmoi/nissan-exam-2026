@@ -1,0 +1,39 @@
+package presentation;
+
+import data.VehicleDataRepository;
+import domain.model.Vehicle;
+import domain.usecases.GetAllVehiclesUseCase;
+import domain.usecases.SaveVehicleUseCase;
+
+import java.util.ArrayList;
+
+public class VehicleView {
+    public void addAndCheck(Vehicle vehicle){
+        ArrayList<Vehicle> vehicles;
+        GetAllVehiclesUseCase getAllVehiclesUseCase = new GetAllVehiclesUseCase(VehicleDataRepository.getInstance());
+        SaveVehicleUseCase saveVehicleUseCase = new SaveVehicleUseCase(VehicleDataRepository.getInstance());
+
+        vehicles = getAllVehiclesUseCase.execute();
+
+        for (Vehicle v : vehicles){
+            System.out.println(v.getId());
+            System.out.println(v.getModel());
+            System.out.println(v.getHp());
+            System.out.println(v.getDoorsNumber());
+            System.out.println(v.getColor());
+        }
+
+        saveVehicleUseCase.execute(vehicle);
+
+        vehicles = getAllVehiclesUseCase.execute();
+
+        for (Vehicle v : vehicles){
+            System.out.println(v.getId());
+            System.out.println(v.getModel());
+            System.out.println(v.getHp());
+            System.out.println(v.getDoorsNumber());
+            System.out.println(v.getColor());
+        }
+
+    }
+}
