@@ -24,9 +24,7 @@ public class VehicleDataRepository implements IVehicleRepository {
     }
 
     @Override
-    public void delete(String vehicleId) {
-
-    }
+    public void delete(String vehicleId) { vehicleMemLocalDataSource.delete(vehicleId); }
 
     public static VehicleDataRepository getInstance(){
         if (instance == null){
