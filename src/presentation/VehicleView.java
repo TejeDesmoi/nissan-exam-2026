@@ -23,7 +23,7 @@ public class VehicleView {
             System.out.println(v.getColor());
         }
 
-        saveVehicleUseCase.execute(new Vehicle("4","Modelo 4","70","3","Gris"));
+        saveVehicleUseCase.execute(vehicle);
 
         vehicles = getAllVehiclesUseCase.execute();
 
