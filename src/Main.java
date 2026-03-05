@@ -1,11 +1,12 @@
 import data.VehicleDataRepository;
 import domain.model.Vehicle;
-import domain.usecases.SaveVehicleUseCase;
+import domain.usecases.GetAllVehiclesUseCase;
 
 public class Main {
     public static void main(String[] args) {
-        SaveVehicleUseCase saveVehicleUseCase = new SaveVehicleUseCase(VehicleDataRepository.getInstance());
+        GetAllVehiclesUseCase getVehicleUseCase = new GetAllVehiclesUseCase(VehicleDataRepository.getInstance());
 
-        saveVehicleUseCase.execute(new Vehicle("1","Corolla","70","4","red"));
+        getVehicleUseCase.execute();
+        System.out.println();
     }
 }

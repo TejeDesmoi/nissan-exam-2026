@@ -9,6 +9,10 @@ public class VehicleMemLocalDataSource {
 
     private ArrayList<Vehicle> storage = new ArrayList<>();
 
+    public VehicleMemLocalDataSource() {
+        initData();
+    }
+
     private void initData(){
         var v1 = new Vehicle("1","Modelo 1","70","3","Rojo");
         storage.add(v1);
